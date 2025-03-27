@@ -1,0 +1,13 @@
+/* Adjust calendar styles for small screens */
+@media (max-width: 640px) {
+    .rdp { 
+      font-size: 14px;
+    }
+    .rdp-nav {
+      padding: 5px;
+    }
+    .rdp-caption {
+      font-size: 16px;
+    }
+  }
+  
