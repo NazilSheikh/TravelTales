@@ -207,40 +207,6 @@ const [dateRange, setDateRange] = useState({ from: null, to: null });
     
   }
 
-  // Searching the story accn to location and title :
-
-// const onSearchStory = async() =>{
-
-//   try
-//   {
-
-//     let token = localStorage.getItem("token") ;
-    
-//     const response = await axios.get('http://localhost:3000/api/users/search' , {
-//             // THIS HEADER IS ALSO THE PART OF BACKEND API IN POSTMAN WHERE WE NEED TO GIVEN TOKEN BECAUSE OF ISLO 
-//       headers : {
-//               Authorization:`Bearer ${token}` ,
-//             },
-//             // ThiS IS THE query parameter we have given in backend postman to search story
-//             params:{
-//               query ,
-//             }
-//     }) ;
-//     if(response.data && response.data.story)
-//     {
-//       setFilterType("search");
-//       // this is the story we finded using search bar
-//        SetAlluser(response.data.story) ;
-//     }
-    
-//   }
-//   catch(error)
-//   {
- 
-//       console.error("Error searching the story info:", error);
-  
-// }
-// }
 
 const onSearchStory = async () => {
   try {
