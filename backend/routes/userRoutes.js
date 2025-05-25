@@ -7,7 +7,7 @@ const router = express.Router();
 require('dotenv').config(); // For accessing process.env.JWT_SECRET
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
-app.use(express.json()); // ✅ Middleware to parse JSON
+app.use(express.json()); //  Middleware to parse JSON
 router.use(cookieParser());
 const TravelSchema = require('../models/travelStorymodel.js');
 // const upload = require('./multer.js');
@@ -17,7 +17,7 @@ const path = require("path") ;
 const { error } = require('console');
 
 app.post('/register', async (req, res) => {
-    console.log("Request Body:", req.body);  // ✅ Debugging line
+    console.log("Request Body:", req.body);  // Debugging line
     try {
         const { name, email, password } = req.body;
         if (!name || !email || !password) {
@@ -41,7 +41,7 @@ app.post('/register', async (req, res) => {
         );
 
         res.cookie("token", token, { httpOnly: true });
-        res.status(201).json({ message: "Registered Successfully" });
+        res.status(201).json({ message: " Registered Successfully " });
     } catch (error) {
         console.error("Server Error:", error);
         res.status(500).json({ error: "Server Error" });
@@ -75,7 +75,7 @@ app.post('/login' , async (req, res) => {
 
               res.cookie("token", token, { httpOnly: true, secure: process.env.NODE_ENV === "production" });
               res.status(200).json({ message: "Logged in Successfully", token });
-              // ✅ Only one response
+              // Only one response
           } else {
               return res.status(401).send("Invalid credentials");
           }
@@ -108,7 +108,7 @@ app.get('/get-user', isLoggedIn, async (req, res) => {
         if (!user) {
             return res.status(404).json({ error: "User not found" });
         }
-        res.json(user);  // ✅ Return user details
+        res.json(user);   
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Server Error" });

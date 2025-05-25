@@ -13,15 +13,14 @@ export const Signup = () => {
   const [name , setName] = useState("");
 
   const handleRegister = async (e) => {
-    e.preventDefault(); // ✅ Prevent form default behavior
-  
-    console.log("Sending Request:", { name, email, password }); // ✅ Debugging line
+    e.preventDefault(); // 
+    console.log("Sending Request:", { name, email, password }); //  Debugging line
   
     try {
       const response = await axios.post(
         'http://localhost:3000/api/users/register',
-        { name, email, password }, // ✅ Ensure all fields are included
-        { withCredentials: true } // ✅ Enable cookies if needed
+        { name, email, password }, //  Ensure all fields are included
+        { withCredentials: true } //  Enable cookies if needed
       );
       alert("Registration Successful!");
     } catch (error) {
@@ -68,7 +67,7 @@ export const Signup = () => {
   type="text"
   placeholder="Username"
   name="username"
-  value={name} // ✅ Ensure input reflects state
+  value={name} 
   onChange={(e) => setName(e.target.value)}
   required
 />
@@ -78,7 +77,7 @@ export const Signup = () => {
   type="email"
   placeholder="Email"
   name="email"
-  value={email} // ✅ Ensure input reflects state
+  value={email} 
   onChange={(e) => setEmail(e.target.value)}
   required
 />

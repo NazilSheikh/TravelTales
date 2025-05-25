@@ -7,7 +7,7 @@ const path = require('path');
 dotenv.config();
 connectDB();
 
-app.use(express.json()); // ✅ JSON Middleware
+app.use(express.json()); 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.get('/', (req, res) => {
@@ -21,7 +21,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
 }));
 
-// ✅ Use Router
+
 app.use('/api/users', require('./routes/userRoutes'));
 
 const PORT = process.env.PORT || 3000;

@@ -227,7 +227,7 @@ const updateTravelStory = async () => {
     // }
 
     // Refresh the stories list
-    await getAllUserInfo();  // ✅ Ensure this updates the state
+    await getAllUserInfo();  // 
 
     // Close the modal
     onClose();
@@ -235,10 +235,10 @@ const updateTravelStory = async () => {
     if (error.response && error.response.data && error.response.data.message) {
       setError(error.response.data.message);
       console.error("Error updating story:", error);
-      toast.error(error.response.data.message);  // ✅ Display actual error message
+      toast.error(error.response.data.message);  //
     } else {
       setError("Unexpected error occurred while updating the story");
-      toast.error("Unexpected error occurred while updating the story");  // ✅ Show toast error
+      toast.error("Unexpected error occurred while updating the story");  r
     }
   }
 };

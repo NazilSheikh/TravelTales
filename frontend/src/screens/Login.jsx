@@ -87,7 +87,7 @@ const Login = () => {
   const [password , setPassword] = useState("");
   const navigate = useNavigate();
   const handleLogin = async(e) =>{    
-  e.preventDefault(); // ✅ Prevent form default behavior
+  e.preventDefault(); //  
   try{
 
     const {data} = await axios.post('http://localhost:3000/api/users/login' , {email , password}) ;
@@ -132,7 +132,7 @@ const Login = () => {
   type="email"
   placeholder="Email"
   name="email"
-  value={email} // ✅ Ensure input reflects state
+  value={email} // 
   onChange={(e) => setEmail(e.target.value)}
   required
 />

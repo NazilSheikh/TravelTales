@@ -92,6 +92,7 @@ index === storyInfo.visitedLocation.length - 1 ? `${item}` : `${item} , `
 Email : {storyInfo?.email || "No Email found "}</p>  
 </div> */}
 
+
 <div className="bg-blue-100 p-4 rounded-lg shadow-md w-fit">
   <p className="flex items-center gap-2 text-gray-700 font-semibold text-lg">
     <FaUser className="text-blue-500" />  {storyInfo?.name || "No user found"}
