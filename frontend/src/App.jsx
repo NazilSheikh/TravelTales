@@ -51,6 +51,7 @@ import Explore from './HomepageComponents/Explore'
 function App() {
   return (
     <Router>
+
       <Routes>
         {/* Public Routes */}
         <Route path='/' element={<Home />} />
@@ -64,11 +65,12 @@ function App() {
         {/* Redirect Unknown Routes to Home */}
         <Route path='*' element={<Navigate to="/" />} />
       </Routes>
+      
     </Router>
   );
 }
 
-// ✅ Protected Route Component
+// Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const isAuthenticate = !!localStorage.getItem("token");
 
