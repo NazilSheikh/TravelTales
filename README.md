@@ -64,9 +64,9 @@ PORT=5000
 Running the App
 
 # Run backend
-cd frontend
+cd backend
 nodemon app
 
-# In another terminal, go to client folder
+# In another terminal, go to frontend folder
 cd frontend
 npm run dev
