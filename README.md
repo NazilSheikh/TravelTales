@@ -1,7 +1,7 @@
 Travel Tales
 Travel Tales is a full-stack travel storytelling platform where users can share and explore travel experiences with rich images, geolocations, and detailed stories. It offers secure authentication, user profile management, advanced story search, and a responsive design for all devices.
 
-🔗 Project Link:  https://github.com/NazilSheikh/TravelTales
+🔗 Project Link: https://travel-taless-bm3p.vercel.app/
 
 🚀 Features
 🧾 100% CRUD Operations: Create, read, update, and delete travel stories.
